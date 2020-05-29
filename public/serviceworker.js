@@ -1,4 +1,4 @@
-var staticCacheName = "pwa-v" + new Date().getTime();
+var staticCacheName = "ArKaPWA";
 var filesToCache = [
     '/offline',
     '/images/icons/icon-72x72.png',
