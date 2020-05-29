@@ -1,4 +1,4 @@
-var staticCacheName = "ArKaPWA";
+var staticCacheName = "ArKaPWAv" + new Date().getTime();
 var filesToCache = [
     '/offline',
     '/images/icons/icon-72x72.png',
@@ -28,7 +28,7 @@ self.addEventListener('activate', event => {
         caches.keys().then(cacheNames => {
             return Promise.all(
                 cacheNames
-                    .filter(cacheName => (cacheName.startsWith("pwa-")))
+                    .filter(cacheName => (cacheName.startsWith("ArKaPWA")))
                     .filter(cacheName => (cacheName !== staticCacheName))
                     .map(cacheName => caches.delete(cacheName))
             );
